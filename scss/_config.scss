@@ -39,3 +39,35 @@ $background-opacity: 0.7;
     }
   }
 }
+
+//------------------------------------------------->
+//-- MEDIA QUERY MIXINS -->
+//------------------------------------------------->
+
+// Small Screens
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// Medium Screens
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Large Screens
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+// Extra Large Screens
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

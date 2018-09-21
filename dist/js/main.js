@@ -1,4 +1,7 @@
-// Select UI Elements
+//------------------------------------------------->
+//-- UI SELECTORS -->
+//------------------------------------------------->
+
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
@@ -11,7 +14,10 @@ let showMenu = false;
 // Add Event Listener on Button
 menuBtn.addEventListener('click', toggleMenu);
 
-// Toggle Menu Function
+//------------------------------------------------->
+//-- MENU TOGGLE FUNCTION -->
+//------------------------------------------------->
+
 function toggleMenu() {
   if (!showMenu) {
     menuBtn.classList.add('close');
@@ -19,17 +25,13 @@ function toggleMenu() {
     menuNav.classList.add('show');
     menuBrand.classList.add('show');
     navItems.forEach(item => item.classList.add('show'));
-
-    // Set Menu State
-    showMenu = true;
+    showMenu = true; // Set Menu State True
   } else {
     menuBtn.classList.remove('close');
     menu.classList.remove('show');
     menuNav.classList.remove('show');
     menuBrand.classList.remove('show');
     navItems.forEach(item => item.classList.remove('show'));
-
-    // Set Menu State
-    showMenu = false;
+    showMenu = false; // Set Menu State False
   }
 }

@@ -13,12 +13,12 @@ $background-opacity: 0.7;
 //-- MIXINS -->
 //------------------------------------------------->
 
-// Global Transition Animation
+// Global Animation
 @mixin easeOut {
-  transition: all 0.5s ease-out;
+  transition: all 0.4s ease-out;
 }
 
-// Background Image Configuration
+// Background & Overlay Configuration
 @mixin background {
   @if $show-home-image {
     &#bg-img {
@@ -37,37 +37,5 @@ $background-opacity: 0.7;
         background: rgba($primary-color, $background-opacity);
       }
     }
-  }
-}
-
-//------------------------------------------------->
-//-- MEDIA QUERY MIXINS -->
-//------------------------------------------------->
-
-// Small Screens
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-// Medium Screens
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-// Large Screens
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-// Extra Large Screens
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
   }
 }

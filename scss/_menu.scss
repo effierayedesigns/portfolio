@@ -50,6 +50,7 @@
 //-- MENU OVERLAY -->
 //------------------------------------------------->
 
+// Menu Positioning
 .menu {
   position: fixed;
   top: 0;
@@ -122,12 +123,9 @@
     &.current > a {
       color: $secondary-color;
 
-      &:before {
-        content: '<';
-      }
-
+      &:before,
       &:after {
-        content: '>';
+        content: '|';
       }
     }
   }

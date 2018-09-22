@@ -39,3 +39,35 @@ $background-opacity: 0.5;
     }
   }
 }
+
+//------------------------------------------------->
+//-- MEDIA QUERY CONFIGURATION -->
+//------------------------------------------------->
+
+// Smart Phone Screens
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+// Tablets & Small Laptops
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Desktops & Laptops
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+// Widescreen Desktops
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

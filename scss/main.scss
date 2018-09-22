@@ -193,7 +193,8 @@ main {
       padding: 0.5rem 1.5rem;
       background: #fff;
 
-      span {
+      span,
+      i {
         color: $tertiary-color;
       }
     }

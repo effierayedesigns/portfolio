@@ -218,7 +218,8 @@ main {
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #fff; }
-      .boxes div:hover span {
+      .boxes div:hover span,
+      .boxes div:hover i {
         color: #4a90e2; }
 
 .btn, .btn-dark, .btn-light {

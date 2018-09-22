@@ -6,7 +6,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/landing.jpg);
@@ -20,7 +20,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(103, 98, 166, 0.7); }
+      background: rgba(103, 98, 166, 0.5); }
 
 h1,
 h2,
@@ -30,7 +30,8 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 5rem; }
+    font-size: 5rem;
+    letter-spacing: 5px; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {

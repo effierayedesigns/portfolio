@@ -18,7 +18,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
 }
 
@@ -35,6 +35,7 @@ h3 {
 
   &.lg-heading {
     font-size: 5rem;
+    letter-spacing: 5px;
   }
 
   &.sm-heading {

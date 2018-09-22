@@ -1,8 +1,14 @@
-// Widescreens
+//------------------------------------------------->
+//-- WIDESCREEN LAYOUT -->
+//------------------------------------------------->
+
 @include mediaXl {
 }
 
-// Desktop & Laptops
+//------------------------------------------------->
+//-- DESKTOP LAYOUT -->
+//------------------------------------------------->
+
 @include mediaLg {
   main {
     .lg-heading {
@@ -11,7 +17,10 @@
   }
 }
 
-// Tablets & Small Laptops
+//------------------------------------------------->
+//-- TABLET LAYOUT -->
+//------------------------------------------------->
+
 @include mediaMd {
   // Main Content Positioning
   main {
@@ -53,9 +62,27 @@
       }
     }
   }
+
+  // About Grid Positioning
+  .about-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3';
+    grid-template-columns: 1fr;
+
+    .bio-image {
+      width: 50%;
+    }
+  }
 }
 
-// Smart Phones
+//------------------------------------------------->
+//-- MOBILE LAYOUT -->
+//------------------------------------------------->
+
 @include mediaSm {
   // Main Content Sizing
   main {
@@ -67,6 +94,12 @@
 
     .sm-heading {
       font-size: 1.25rem;
+    }
+
+    &#about {
+      .lg-heading {
+        margin-top: 10vh;
+      }
     }
   }
 

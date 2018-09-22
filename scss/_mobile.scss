@@ -2,6 +2,7 @@
 //-- WIDESCREEN LAYOUT -->
 //------------------------------------------------->
 
+// Projects Grid Positioning
 @include mediaXl {
   .projects-info {
     grid-template-columns: repeat(4, 1fr);
@@ -13,12 +14,14 @@
 //------------------------------------------------->
 
 @include mediaLg {
+  // Main Content Sizing
   main {
     .lg-heading {
       font-size: 3.5rem;
     }
   }
 
+  // Projects Gird Positioning
   .projects-info {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -85,6 +88,7 @@
     }
   }
 
+  // Projects Grid Positioning
   .projects-info {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -108,7 +112,8 @@
     }
 
     &#about,
-    &#projects {
+    &#projects,
+    &#contact {
       .lg-heading {
         margin-top: 10vh;
       }
@@ -122,5 +127,8 @@
     }
   }
 
-  grid-template-columns: repeat(1fr);
+  // Projects Grid Positioning
+  .projects-info {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

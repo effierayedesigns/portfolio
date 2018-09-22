@@ -45,3 +45,114 @@
     }
   }
 }
+
+//------------------------------------------------->
+//-- MENU OVERLAY -->
+//------------------------------------------------->
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  // Branding and Navigation Postioning
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  // Navigation Panel Animation
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 10);
+    list-style: none;
+    opacity: 0.9;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0); // Slide In From Top
+    }
+  }
+
+  // Branding Panel Animation
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0); // Slide In From Bottom
+    }
+
+    // Avatar Photo Positioning
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url('../img/avatar.jpg');
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 3px $tertiary-color;
+    }
+  }
+
+  // Navigation Link Animation
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0); // Slide In From Right
+    }
+
+    // Current Navigation Styling
+    &.current > a {
+      color: $secondary-color;
+
+      &:before {
+        content: '<';
+      }
+
+      &:after {
+        content: '>';
+      }
+    }
+  }
+
+  // Navigation Links Animation & Styles
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 1.875rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+}
+
+// Delay Navigation Links Animation
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

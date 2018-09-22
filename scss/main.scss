@@ -76,12 +76,23 @@ main {
   .icons {
     margin-top: 1rem;
 
+    // Link Animation
     a {
       padding: 0.4rem;
 
       &:hover {
         color: lighten($tertiary-color, 10);
         @include easeOut;
+      }
+
+      // Icon Animation
+      i {
+        @include easeOut;
+
+        &:hover {
+          transform: scale(1.4) translateY(-7px);
+          @include easeOut;
+        }
       }
     }
   }

@@ -3,6 +3,9 @@
 //------------------------------------------------->
 
 @include mediaXl {
+  .projects-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 //------------------------------------------------->
@@ -14,6 +17,10 @@
     .lg-heading {
       font-size: 3.5rem;
     }
+  }
+
+  .projects-info {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -77,6 +84,10 @@
       width: 50%;
     }
   }
+
+  .projects-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 //------------------------------------------------->
@@ -96,7 +107,8 @@
       font-size: 1.25rem;
     }
 
-    &#about {
+    &#about,
+    &#projects {
       .lg-heading {
         margin-top: 10vh;
       }
@@ -109,4 +121,6 @@
       font-size: 1.5rem;
     }
   }
+
+  grid-template-columns: repeat(1fr);
 }
